@@ -2,11 +2,20 @@
 
 The main aim of developing this application is to explore the working of nodejs and expressjs.
 
+
+# Developer Workspace
+[![Contribute](https://che.openshift.io/factory/resources/factory-contribute.svg)](http://codeready-crw.apps.ocp4.home.ocpcloud.com/f?url=https://github.com/VeerMuchandi/nodejs-todo-app.git)
+
+This CodeReady Workspaces Factory can also be invoked with any host:
+{hostURL}/f?url=https://github.com/VeerMuchandi/nodejs-todo-app.git
+It will read the `.factory.json` from the repository to instanciate the developer workspace.
+
+
 ## Deploying to OpenShift
 
 Deploy this sample application to Red Hat CodeReady Workspaces:
 <a href="http://codeready-crw.apps.ocp4.home.ocpcloud.com/f?url=https://github.com/VeerMuchandi/nodejs-todo-app.git">
-    <img src="http://beta.codenvy.com/factory/resources/codenvy-contribute.svg" width="130" alt="Push" align="top">
+    <img src="https://che.openshift.io/factory/resources/factory-contribute.svg" width="130" alt="Push" align="top">
 </a>
 
 ## Getting Started
