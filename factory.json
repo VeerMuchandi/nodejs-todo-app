@@ -1,6 +1,6 @@
 {
   "v": "4.0",
-  "name": "todo3",
+  "name": "stev-todo-factory",
   "workspace": {
     "defaultEnv": "default",
     "environments": {
@@ -64,7 +64,7 @@
         },
         "type": "blank",
         "source": {
-          "location": "git@github.com:VeerMuchandi/nodejs-todo-app.git",
+          "location": "https://github.com/VeerMuchandi/nodejs-todo-app.git",
           "type": "git",
           "parameters": {}
         },
@@ -90,7 +90,6 @@
     ],
     "links": []
   },
-  "id": "factorykambf96q6d223w4h",
   "ide": {
     "onProjectsLoaded": {
       "actions": [
@@ -99,14 +98,14 @@
             "file": "/nodejs-todo-app/package.json"
           },
           "id": "openFile"
+        },
+        {
+          "properties": {
+            "name": "initialize"
+          },
+          "id": "runCommand"
         }
       ]
     }
-  },
-  "creator": {
-    "name": "veer",
-    "email": "veer@redhat.com",
-    "created": 1564153045546,
-    "userId": "a28d9850-345a-4d37-b99f-07742d2776c3"
   }
 }
