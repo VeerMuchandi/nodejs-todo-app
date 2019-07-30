@@ -1,37 +1,10 @@
-# Sample Application
+# Magic Profitizer Application
 
-The main aim of developing this application is to explore the working of nodejs and expressjs.
+This application is magical - it takes your unused monthly budget and turns it into pure PROFIT! It does this through the magic of technology and the wisdom of the underwear gnomes.
 
-## Deploying to OpenShift
+## Contributing to the Project
 
-Deploy this sample application to Red Hat CodeReady Workspaces:
+Our team uses Red Hat CodeReady Workspaces for our development. No neeed to setup your laptop - each developer gets a sandbox developer environment hosted on our Red Hat OpenShift cluster:
 <a href="http://codeready-crw.apps.ocp4.home.ocpcloud.com/f?name=todonodejsfactory&user=veer">
     <img src="http://beta.codenvy.com/factory/resources/codenvy-contribute.svg" width="130" alt="Push" align="top">
 </a>
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine.
-
-### Prerequisites
-
-Below steps are needed only for the first time when you setup your dev machine
-
-Install node.js server from https://nodejs.org/en/download/
-
-### Installing
-
-1. Clone this git repository, if you haven't done already.
-
-   `git clone https://github.com/cmevawala/nodejs-todo-app.git`
-
-2. Install local npm dependencies
-
-   `npm install`
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Built With
-
-* [Node](https://nodejs.org/en/) - JavaScript runtime built on Chrome's V8 JavaScript engine
-* [Express](https://expressjs.com/) - Node.js web application framework
