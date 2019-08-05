@@ -23,7 +23,7 @@ if (mongoHost && mongoPort && mongoDatabase) {
   
   console.log('To connect at %s', mongoURL);
 
-  mongoose.connect(mongoURL);
+  mongoose.connect(mongoURL,{ useNewUrlParser: true });
 
 // Create Schema
 var todoschema = new mongoose.Schema({
