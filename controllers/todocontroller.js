@@ -1,7 +1,29 @@
 var bodyparser = require('body-parser');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://user:password@mongodb.catalyst1.svc:27017/todos');
+//mongoose.connect('mongodb://user:password@mongodb.catalyst1.svc:27017/todos');
 //mongoose.connect('mongodb://admin:admin@ds135532.mlab.com:35532/todolist');
+
+var mongoURLLabel, mongoURL, mongoHost, mongoPort, mongoDatabase, mongoPassword, mongoUser;
+var mongoServiceName = process.env.DATABASE_SERVICE_NAME //.toUpperCase();
+    mongoHost = process.env[mongoServiceName + '_SERVICE_HOST'];
+    mongoPort = process.env[mongoServiceName + '_SERVICE_PORT'];
+    mongoDatabase = process.env[mongoServiceName + '_DATABASE'];
+    mongoPassword = process.env[mongoServiceName + '_PASSWORD'];
+    mongoUser = process.env[mongoServiceName + '_USER'];
+    
+if (mongoHost && mongoPort && mongoDatabase) {
+    mongoURLLabel = mongoURL = 'mongodb://';
+    if (mongoUser && mongoPassword) {
+      mongoURL += mongoUser + ':' + mongoPassword + '@';
+    }
+    // Provide UI label that excludes user id and pw
+    mongoURLLabel += mongoHost + ':' + mongoPort + '/' + mongoDatabase;
+    mongoURL += mongoHost + ':' +  mongoPort + '/' + mongoDatabase;
+  }
+  
+  console.log('To connect at %s', mongoURL);
+
+  mongoose.connect(mongoURL);
 
 // Create Schema
 var todoschema = new mongoose.Schema({
