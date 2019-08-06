@@ -1,6 +1,6 @@
 var bodyparser = require('body-parser');
 var mongoose = require('mongoose');
-//mongoose.connect('mongodb://user:password@mongodb.catalyst1.svc:27017/todos');
+mongoose.connect('mongodb://user:password@mongodb.catalyst1.svc:27017/todos');
 //mongoose.connect('mongodb://admin:admin@ds135532.mlab.com:35532/todolist');
 
 var mongoURLLabel, mongoURL, mongoHost, mongoPort, mongoDatabase, mongoPassword, mongoUser;
@@ -23,7 +23,8 @@ if (mongoHost && mongoPort && mongoDatabase) {
   
   console.log('To connect at %s', mongoURL);
 
-  mongoose.connect(mongoURL,{ useNewUrlParser: true });
+  //mongoose.connect(mongoURL,{ useNewUrlParser: true });
+  mongoose.connect('mongodb://user:password@mongodb.catalyst1.svc:27017/todos');
 
 // Create Schema
 var todoschema = new mongoose.Schema({
