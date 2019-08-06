@@ -1,6 +1,6 @@
 {
   "v": "4.0",
-  "name": "todo3",
+  "name": "todo-factory",
   "workspace": {
     "defaultEnv": "default",
     "environments": {
@@ -58,13 +58,13 @@
             "master"
           ],
           "commands": [
-            "{\"commandLine\":\"cd nodejs-todo-app && npm start\", \"name\":\"run\", \"attributes\":{\"goal\":\"Run\", \"previewUrl\":\"${server.3000/tcp}/todo\"}, \"type\":\"custom\"}",
-            "{\"commandLine\":\"cd nodejs-todo-app && npm install\", \"name\":\"initialize\", \"attributes\":{\"goal\":\"Build\", \"previewUrl\":\"\"}, \"type\":\"custom\"}"
+            "{\"commandLine\":\"cd nodejs-todo-app && npm install\", \"name\":\"initialize\", \"attributes\":{\"goal\":\"Build\", \"previewUrl\":\"\"}, \"type\":\"custom\"}",
+            "{\"commandLine\":\"cd nodejs-todo-app && DATABASE_SERVICE_NAME=mongodb MONGODB_SERVICE_HOST=mongodb.catalyst1.svc MONGODB_SERVICE_PORT=27017 MONGODB_USER=user MONGODB_PASSWORD=password MONGODB_DATABASE=todos npm start\", \"name\":\"run\", \"attributes\":{\"goal\":\"Run\", \"previewUrl\":\"${server.3000/tcp}/todo\"}, \"type\":\"custom\"}"
           ]
         },
         "type": "blank",
         "source": {
-          "location": "git@github.com:VeerMuchandi/nodejs-todo-app.git",
+          "location": "https://github.com/VeerMuchandi/nodejs-todo-app",
           "type": "git",
           "parameters": {}
         },
@@ -76,7 +76,7 @@
         ]
       }
     ],
-    "name": "todoapp",
+    "name": "wksp-tdt6",
     "attributes": {},
     "commands": [
       {
@@ -90,7 +90,7 @@
     ],
     "links": []
   },
-  "id": "factorykambf96q6d223w4h",
+  "id": "factoryo8wb18999bgq434m",
   "ide": {
     "onProjectsLoaded": {
       "actions": [
@@ -106,7 +106,7 @@
   "creator": {
     "name": "veer",
     "email": "veer@redhat.com",
-    "created": 1564153045546,
-    "userId": "a28d9850-345a-4d37-b99f-07742d2776c3"
+    "created": 1565060401204,
+    "userId": "3eba051e-02a9-4256-b344-288ef337d106"
   }
 }
