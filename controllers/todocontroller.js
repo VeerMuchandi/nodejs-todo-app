@@ -1,6 +1,6 @@
 var bodyparser = require('body-parser');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://user:password@mongodb.catalyst1.svc:27017/todos');
+//mongoose.connect('mongodb://user:password@mongodb.catalyst1.svc:27017/todos');
 //mongoose.connect('mongodb://admin:admin@ds135532.mlab.com:35532/todolist');
 
 process.argv.forEach((val, index) => {
