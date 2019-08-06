@@ -4,7 +4,7 @@ mongoose.connect('mongodb://user:password@mongodb.catalyst1.svc:27017/todos');
 //mongoose.connect('mongodb://admin:admin@ds135532.mlab.com:35532/todolist');
 
 var mongoURLLabel, mongoURL, mongoHost, mongoPort, mongoDatabase, mongoPassword, mongoUser;
-var mongoServiceName = process.env.DATABASE_SERVICE_NAME //.toUpperCase();
+var mongoServiceName = process.env.DATABASE_SERVICE_NAME.toUpperCase();
     mongoHost = process.env[mongoServiceName + '_SERVICE_HOST'];
     mongoPort = process.env[mongoServiceName + '_SERVICE_PORT'];
     mongoDatabase = process.env[mongoServiceName + '_DATABASE'];
@@ -23,8 +23,8 @@ if (mongoHost && mongoPort && mongoDatabase) {
   
   console.log('To connect at %s', mongoURL);
 
-  //mongoose.connect(mongoURL,{ useNewUrlParser: true });
-  mongoose.connect('mongodb://user:password@mongodb.catalyst1.svc:27017/todos');
+  mongoose.connect(mongoURL,{ useNewUrlParser: true });
+  //mongoose.connect('mongodb://user:password@mongodb.catalyst1.svc:27017/todos');
 
 // Create Schema
 var todoschema = new mongoose.Schema({
