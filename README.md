@@ -2,9 +2,11 @@
 
 The main aim of developing this application is to explore the working of nodejs and expressjs.
 
-## Deploying to OpenShift
+## Developing on OpenShift
 
-Deploy this sample application to Red Hat CodeReady Workspaces:
+We use Red Hat's Code Ready Workspaces (CRW) for application development. Pressing on the badge here will set up a workspace for you. You don't have to install anything on your workstation. CRW provides IDE and Runtimes!!
+
+To start your workstation in Red Hat CodeReady Workspaces:
 <a href="http://codeready-crw.apps.ocp4.home.ocpcloud.com/f?name=todonodejsfactory&user=veer">
     <img src="http://beta.codenvy.com/factory/resources/codenvy-contribute.svg" width="130" alt="Push" align="top">
 </a>
