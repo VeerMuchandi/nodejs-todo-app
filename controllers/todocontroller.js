@@ -9,11 +9,14 @@ process.argv.forEach((val, index) => {
 
 var mongoURLLabel, mongoURL, mongoHost, mongoPort, mongoDatabase, mongoPassword, mongoUser;
 var mongoServiceName = process.env.DATABASE_SERVICE_NAME.toUpperCase();
-    mongoHost = process.env[mongoServiceName + '_SERVICE_HOST'];
-    mongoPort = process.env[mongoServiceName + '_SERVICE_PORT'];
-    mongoDatabase = process.env[mongoServiceName + '_DATABASE'];
-    mongoPassword = process.env[mongoServiceName + '_PASSWORD'];
-    mongoUser = process.env[mongoServiceName + '_USER'];
+var mongoHost = process.env[mongoServiceName + '_SERVICE_HOST'];
+var mongoPort = process.env[mongoServiceName + '_SERVICE_PORT'];
+console.log("service host and port", mongoHost, mongoPort);
+var mongoDatabase = process.env.MONGO_DATABASE;
+mongoDatabase = 'admin';
+var mongoPassword = process.env.MONGO_ROOT_PASSWORD;
+var mongoUser = process.env.MONGO_ROOT_USERNAME;
+console.log("Username and password", mongoUser, mongoPassword);
     
 if (mongoHost && mongoPort && mongoDatabase) {
     mongoURLLabel = mongoURL = 'mongodb://';
@@ -24,6 +27,8 @@ if (mongoHost && mongoPort && mongoDatabase) {
     mongoURLLabel += mongoHost + ':' + mongoPort + '/' + mongoDatabase;
     mongoURL += mongoHost + ':' +  mongoPort + '/' + mongoDatabase;
   }
+
+  //mongoURL = 'mongodb://username:password@mongodb-service.default:27017/admin';
   
   console.log('To connect at %s', mongoURL);
 
